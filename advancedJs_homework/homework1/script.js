@@ -81,5 +81,6 @@ let names = ["David", "Mila", "Marko"];
         </ul>
       `;
 
-      resultDiv.innerHTML += ulHtml;
+      // resultDiv.innerHTML += ulHtml;
+      resultDiv.innerHTML = ulHtml; 
     });
