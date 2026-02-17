@@ -38,6 +38,44 @@ fetch('https://raw.githubusercontent.com/sedc-codecademy/skwd9-04-ajs/main/Sampl
         .map(x=>x.firstName)
         console.log(maleNameBAverage2)
 
+        //New requirements HOMEWORK
+
+        let allStudents30plus=data
+        .filter(x=>x.age>30)
+        .map(x=>`${x.firstName} ${x.lastName} ${x.age}`)
+        console.log(allStudents30plus);
+
+
+        let allStudentsCityB=data
+        .filter(x=>x.city.slice(0,1)==="B")
+        .map(x=>`${x.firstName} ${x.lastName} ${x.city}`)
+        console.log(allStudentsCityB);
+
+
+        let allStudentsEmail=data
+        .filter(x=>x.email)
+        .map(x=>x.email)
+        console.log(allStudentsEmail);
+
+
+        let allStudentsAverage3=data
+        .filter(x=>x.averageGrade===3)
+        .map(x=>`${x.firstName} ${x.lastName}`)
+        console.log(allStudentsAverage3);
+
+        let counterMale=0;
+        let counterFemale=0;
+        data.forEach(x=>{
+            if(x.gender==="Male"){
+                counterMale++;
+            }
+            if(x.gender==="Female"){
+                counterFemale++;
+            }
+        })
+        console.log(`Male students: ${counterMale}`);
+        console.log(`Female students: ${counterFemale}`);
+
 
     })
     .catch(function(error){
